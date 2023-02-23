@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&display=swap');
+
+.title{
+    /* Capitalize Text */
+    text-transform: uppercase; 
+    /* Enlarges Text to 8 viewport width */
+    font-size: 8vw; 
+    /* Monserrat font family */
+    font-family: 'Montserrat',sans-serif; 
+    /* Cursor Shows a pointer on hovering */
+    cursor: pointer;
+    color: white;
+}
+#dark{
+    color: black;
+}
+
+.header{
+    /* Creating a flexbox in header */
+    display: flex;
+    /* Flex - Top to Bottom */
+    flex-direction: column;
+    /* Center Axis for all flex elements */
+    align-items: center;
+}
+
+.divider{
+    margin: 10px;
+}
