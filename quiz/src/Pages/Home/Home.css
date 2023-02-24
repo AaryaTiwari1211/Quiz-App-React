@@ -1,4 +1,4 @@
-.settings{
+.settings {
     /* Setting font size to 30px */
     font-size: 30px;
     /* Setting color text to white */
@@ -17,23 +17,24 @@
     /* Making text thicker */
     font-weight: 300;
 }
-.home-content{
+
+.home-content {
     /* Creating flexbox in outer box */
     display: flex;
     /* The value space-around is used for displaying flex items with space between, before and after the lines. */
     justify-content: space-around;
 }
 
-.banner{
+.banner {
     /* Responsive width of 55% */
-    width:55%;
+    width: 55%;
     /* The align-self property specifies the alignment in the block direction for the selected item inside a flexbox or grid container. */
     align-self: center;
     /* Padding 8px on all sides */
     padding: 8px;
 }
 
-.settings-select{
+.settings-select {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -42,18 +43,36 @@
     justify-content: space-evenly;
 }
 
+/* #name{
+    border-color: white;
+} */
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #ffffff !important;
+}
+
+.MuiFilledInput-root {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+.MuiInput-root {
+    border-bottom: 1px solid #ffffff !important;
+}
+
 /* Using Media Query for Modile Version */
-@media (max-width: 800px){
-    .home-content{
+@media (max-width: 800px) {
+    .home-content {
         flex-direction: column-reverse;
         align-items: center;
     }
-    .banner{
+
+    .banner {
         width: 85%;
         padding: 0;
         padding-top: 20px;
     }
-    .settings{
+
+    .settings {
         width: 100%;
     }
 }
