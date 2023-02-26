@@ -17,6 +17,18 @@
     /* Making text thicker */
     font-weight: 300;
 }
+.MuiFormControl-root:nth-child(1),
+.MuiFormControl-root:nth-child(2),
+.MuiFormControl-root:nth-child(3){
+    margin-bottom: 75px;
+}
+
+#name,
+#category,
+#difficulty
+{
+    color: #ffffff;
+}
 
 .home-content {
     /* Creating flexbox in outer box */
