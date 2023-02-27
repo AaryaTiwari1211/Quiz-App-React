@@ -10,16 +10,19 @@ import { useState } from 'react';
 import axios from 'axios'
 function App() {
   const [name, setName] = useState('')
-  // const [question, setQuestion] = useState('')
-  // const [score, setScore] = useState(0)
+  const [questions, setQuestions] = useState('')
+  const [score, setScore] = useState(0)
   const fetchQuestions = (category = "", difficulty = "") => {
   axios.get(`https://opentdb.com/api.php?amount=10&category=${category && `&category=${category}`}&difficulty=${difficulty && `&difficulty=${difficulty}`}&type=multiple`)
     .then(response => {
         console.log(response.data);
+        const data = response.data;
+        setQuestions(data.results);
     })
     .catch(err => {
         console.error(err);
-    });     
+    });   
+      
   }
 
   return (
@@ -28,7 +31,7 @@ function App() {
         <Header />
         <Routes>
         <Route path='/' exact element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions}/>} />
-        <Route path='/quiz' element={<Quiz/>} />
+        <Route path='/quiz' element={<Quiz name={name} questions={questions} score={score} setScore={setScore} setQuestion={setQuestions}/>} />
         <Route path='/result' element={<Result/>} />
         </Routes>
       </div>
