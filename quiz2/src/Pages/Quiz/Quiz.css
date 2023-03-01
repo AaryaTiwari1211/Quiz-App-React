@@ -1,0 +1,28 @@
+.subTitle{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    letter-spacing: 0.01cm;
+    font-size: 25px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 2px black;
+    padding: 5px 10px;
+}
+.quiz_main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins",sans-serif;
+    margin-top: 20px;
+}
+.subTitle b{
+    color: black;
+}
+
+.score_topic{
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.st_item{
+    margin:

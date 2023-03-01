@@ -13,7 +13,7 @@ function App() {
   const [questions, setQuestions] = useState('')
   const [score, setScore] = useState(0)
   const fetchQuestions = (category = "", difficulty = "") => {
-  axios.get(`https://opentdb.com/api.php?amount=10&category=${category && `&category=${category}`}&difficulty=${difficulty && `&difficulty=${difficulty}`}&type=multiple`)
+  axios.get(`https://opentdb.com/api.php?amount=10&category=${category && `&category=${category}`}&difficulty=${difficulty && `&difficulty=${difficulty}`}&type=multiple`,{ crossDomain: true })
     .then(response => {
         console.log(response.data);
         const data = response.data;
@@ -21,13 +21,12 @@ function App() {
     })
     .catch(err => {
         console.error(err);
-    });   
-      
+    });
   }
 
   return (
     <BrowserRouter>
-      <div className="app" style={{ backgroundImage: 'url(./back.jpg)' }}>
+      <div className="app" style={{ backgroundImage: 'url(./back2.jpg)' }}>
         <Header />
         <Routes>
         <Route path='/' exact element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions}/>} />

@@ -2,7 +2,7 @@
     /* Setting font size to 30px */
     font-size: 30px;
     /* Setting color text to white */
-    color: white;
+    color: #000000;
     /* Creating Flex Box */
     display: flex;
     /* Setting Responsive Width of 45% */
@@ -27,7 +27,7 @@
 #category,
 #difficulty
 {
-    color: #ffffff;
+    color : #000000;
 }
 
 .home-content {
@@ -60,15 +60,15 @@
 } */
 
 .MuiOutlinedInput-notchedOutline {
-    border-color: #ffffff !important;
+    border-color: #000000 !important;
 }
 
 .MuiFilledInput-root {
-    border-bottom: 1px solid #ffffff !important;
+    border-bottom: 1px solid #000000 !important;
 }
 
 .MuiInput-root {
-    border-bottom: 1px solid #ffffff !important;
+    border-bottom: 1px solid #000000 !important;
 }
 
 /* Using Media Query for Modile Version */
