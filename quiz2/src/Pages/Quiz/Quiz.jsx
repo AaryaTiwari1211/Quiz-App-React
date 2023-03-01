@@ -10,19 +10,19 @@ function Quiz({ name, score, questions, setQuestions, setScore }) {
     const [currentQue, setCurrentQue] = useState(0);
 
     const handleShuffle = (options) => {
-        return options.sort(() => Math.random() - 0.5)
+        return options.sort(() => Math.random() - 0.5) // The formula for shuffling using the Random function...
     }
     
     useEffect(() => {
-        if(!questions || !questions[currentQue])
+        if(!questions || !questions[currentQue]) //Checks if questions are recieved from the API or not or if the array has been scanned completely
         {
             return;
         }
         setOptions(handleShuffle([
-            questions[currentQue]?.correct_answer,
-            ...questions[currentQue]?.incorrect_answers
+            questions[currentQue]?.correct_answer, // This part handles the shuffling of the options so that the option A is not always the correct ans
+            ...questions[currentQue]?.incorrect_answers // Spread operator is used to spread the array values in the incorrect answers array
         ]))
-    }, [questions, currentQue])
+    }, [questions, currentQue]) // Re renders the component when these values are changed
     console.log(options)
     return (
         <div className='quiz_main'>
@@ -43,7 +43,7 @@ function Quiz({ name, score, questions, setQuestions, setScore }) {
                     correct={questions[currentQue].correct_answer}
                     />
                 </>
-                : <CircularProgress 
+                : <CircularProgress  // This is the loader which runs till the data is fetched from the API
             style={{margin:100}}
             size={150}
             color = 'inherit'

@@ -1,34 +1,34 @@
 import React from 'react'
 import './Home.css'
-import { Button, MenuItem, TextField } from '@mui/material';
+import { Button, MenuItem, TextField } from '@mui/material';//These are ready-made components in React MUI (Material UI)
 import SendIcon from '@mui/icons-material/Send';
 import Categories from '../../Trivia_Data/Categories'
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import ErrorMessage from './ErrorMessage';
 
-function Home({name , setName , fetchQuestions}) 
+function Home({name , setName , fetchQuestions}) // The name , setName and Questions are sent here as props from the App.jsx file
 {
     const [category, setCategory] = useState("")
     const [difficulty, setDifficulty] = useState("")
     const [error, setError] = useState(false)
 
-    const navigate = useNavigate()
+    const navigate = useNavigate() //From React Router DOM allows navigation between pages 
 
     const handleSubmit = () => {
-        if(!category || !name || !difficulty)
+        if(!category || !name || !difficulty) // Checks whether any field is missing
         {
             setError(true);
             console.log('Fill all the Fields')
             return;
-        }
+        } // This case runs when all the fields are not filled in by the user
         else
         {
             setError(false);
-            fetchQuestions(category , difficulty);
+            fetchQuestions(category , difficulty); // Sends the category and difficulty to the user for fetching data
             console.log('Fetching the Questions')
             navigate('/quiz')
-        }
+        }//When all the fields are filled by the user and the user is navigated to the Quiz Page
     }
 
     return (
@@ -36,7 +36,8 @@ function Home({name , setName , fetchQuestions})
             <div className='settings'>
                 <span>Quiz Settings</span>
                 <div className='settings-select'>
-                    { error ? <ErrorMessage children={<h6>Please fill all the fields</h6>}/> : ''}
+                    {/* The error message is displayed when All fields are not filled */}
+                    { error ? <ErrorMessage children={<h6>Please fill all the fields</h6>}/> : ''}  
                     <TextField
                         sx={{
                             "& .MuiFormLabel-root": {
@@ -53,7 +54,7 @@ function Home({name , setName , fetchQuestions})
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                     />
-                    <TextField
+                    <TextField //This is the Textfield API of MUI which is a component providing an input field
                         sx={{
                             "& .MuiFormLabel-root": {
                                 color: 'white'
@@ -95,7 +96,8 @@ function Home({name , setName , fetchQuestions})
                         onChange={(e) => setDifficulty(e.target.value)}
                         value={difficulty}
                     >
-                        <MenuItem key='Easy' value='easy'>
+                        <MenuItem key='Easy' value='easy' //These are the Items in the Selection table within the Textfield API
+                        >
                             Easy
                         </MenuItem>
 
