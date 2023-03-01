@@ -35,12 +35,12 @@ function Quiz({ name, score, questions, setQuestions, setScore }) {
                     <Questions
                     currentQue={currentQue}
                     setCurrentQue={setCurrentQue}
-                    score={score}
-                    setScore={setScore}
                     questions={questions}
                     setQuestions={setQuestions}
+                    score={score}
+                    setScore={setScore}
                     options={options}
-                    correct={questions[currentQue]?.correct_answer}
+                    correct={questions[currentQue].correct_answer}
                     />
                 </>
                 : <CircularProgress 
