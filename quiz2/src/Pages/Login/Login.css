@@ -1,0 +1,87 @@
+.settings {
+    /* Setting font size to 30px */
+    font-size: 30px;
+    /* Setting color text to white */
+    color: #000000;
+    /* Creating Flex Box */
+    display: flex;
+    /* Setting Responsive Width of 45% */
+    width: 45%;
+    /* Padding 10px on all sides */
+    padding: 10px;
+    /* Flex direction from top to bottom */
+    flex-direction: column;
+    /* Makes the axis of all elements the same */
+    align-items: center;
+    font-family: "Poppins", "sans serif";
+    /* Making text thicker */
+    font-weight: 300;
+}
+
+.MuiFormControl-root:nth-child(1),
+.MuiFormControl-root:nth-child(2),
+.MuiFormControl-root:nth-child(3) {
+    margin-bottom: 75px;
+}
+
+#name,
+#category,
+#difficulty {
+    color: #000000;
+}
+
+.home-content {
+    /* Creating flexbox in outer box */
+    display: flex;
+    /* The value space-around is used for displaying flex items with space between, before and after the lines. */
+    justify-content: space-around;
+}
+
+.banner {
+    /* Responsive width of 55% */
+    width: 55%;
+    /* The align-self property specifies the alignment in the block direction for the selected item inside a flexbox or grid container. */
+    align-self: center;
+    /* Padding 8px on all sides */
+    padding: 8px;
+}
+
+.settings-select {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    flex: 0.8;
+    justify-content: space-evenly;
+}
+
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #000000 !important;
+}
+
+.MuiFilledInput-root {
+    border-bottom: 1px solid #000000 !important;
+}
+
+.MuiInput-root {
+    border-bottom: 1px solid #000000 !important;
+}
+
+/* Using Media Query for Modile Version */
+@media (max-width: 800px) {
+    .home-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .banner {
+        width: 85%;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .settings {
+        width: 100%;
+    }
+}
