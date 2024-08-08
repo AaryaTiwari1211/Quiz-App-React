@@ -3,7 +3,6 @@ import './Login.css'
 import { Button, MenuItem, TextField } from '@mui/material';//These are ready-made components in React MUI (Material UI)
 import SendIcon from '@mui/icons-material/Send';
 import Categories from '../../Trivia_Data/Categories'
-import fire from '../../firebase';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import ErrorMessage from '../Home/ErrorMessage';
